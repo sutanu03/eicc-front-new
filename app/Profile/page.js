@@ -1,10 +1,7 @@
 "use client"
 import { useContext, useEffect, useState } from "react"
 import "./profile.css"
-import Table from 'react-bootstrap/Table';
 import Header from '@/Components/Header';
-import Link from 'next/link';
-import  axios  from 'axios';
 import { UserContext } from "@/context/UserContext";
 
 const Profile = () => {
@@ -57,7 +54,7 @@ const Profile = () => {
   return(
       <>
       <Header/>
-      
+
       {/* <Token/> */}
       <section className="profile">
   <header className="header">

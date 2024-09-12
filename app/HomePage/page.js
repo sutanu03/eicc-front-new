@@ -1,6 +1,6 @@
 "use client"
 import React, {Component} from 'react';
-import css from '../home.css';
+import "../home.css";
 import Header from '@/Components/Header';
 import { GrLinkNext, GrLinkPrevious } from "react-icons/gr";
 import Link from 'next/link';

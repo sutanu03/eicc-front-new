@@ -38,7 +38,7 @@ const LoginOTP = () => {
                 });
                 setToken(token2);
                 localStorage.setItem('token', JSON.stringify(token));
-                console.log('token from local s - ',localStorage.getItem('token'));
+               // console.log('token from local s - ',localStorage.getItem('token'));
              //   console.log("Token set in context:", token2);
                 router.push("/HomePage");
                 document.body.style.background = "white";

@@ -1,11 +1,9 @@
 "use client"
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
 import "./domestic.css";
 import Link from 'next/link';
 import Header from '@/Components/Header';
-import { useRouter } from 'next/navigation';
 
 const Domestic = () => {
 

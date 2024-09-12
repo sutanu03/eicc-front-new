@@ -1,20 +1,13 @@
 "use client"
 import React, { useState, useEffect, useContext } from 'react';
-import DateTimePicker from 'react-datetime-picker';
 import axios from 'axios';
 import "./bookDom.css"
-import { ProgressBarContainer } from '@/Components/ProgressBarContainer';
-import CounterPage from '@/Components/CounterPage';
 
 import { FaPlusCircle } from "react-icons/fa";
 import { FaMinusCircle } from "react-icons/fa";
-import { ImCross } from "react-icons/im";
-import { FaCheck } from "react-icons/fa";
-import { Navigate, useNavigate, useHistory } from "react-router-dom";
 import Header from '@/Components/Header';
 import { useRouter } from 'next/navigation';
 import { UserContext } from '@/context/UserContext';
-//import Link from 'next/link';
 
 const DomesticBook = (props) => {
 
