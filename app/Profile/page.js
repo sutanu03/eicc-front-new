@@ -4,6 +4,8 @@ import "./profile.css"
 import Header from '@/Components/Header';
 import { UserContext } from "@/context/UserContext";
 
+import { FaUserCircle } from "react-icons/fa";
+
 const Profile = () => {
 
     const logoutDone = () => {
@@ -59,7 +61,7 @@ const Profile = () => {
       <section className="profile">
   <header className="header">
     <div className="details">
-      <img src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=b38c22a46932485790a3f52c61fcbe5a" alt="John Doe" className="profile-pic"/>
+     <FaUserCircle />
       <h1 className="heading">Claire Doe</h1>
       <div className="location">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -91,7 +93,7 @@ const Profile = () => {
       ) : (
         <>
         <h1 className='font-bold text-2xl text-[#94D163] py-3 bg-slate-700 text-center'> My Bookings </h1>
-        <div class="table-wrap">
+        <div className="table-wrap">
           <table className="table table-striped">
             <thead>
             <tr>
@@ -127,9 +129,9 @@ const Profile = () => {
       )}
 
     </div>
-    {/* <div className='flex justify-end gap-4 fixed bottom-10 right-10 min-w-full'>
+    <div className='flex justify-end gap-4 fixed bottom-10 right-10 min-w-full'>
         <button onClick={toLogin} className='bg-[#94D163] text-2xl text-black font-bold w-[100px] p-[10px] rounded-sm'>Logout</button>
-      </div> */}
+      </div>
       </>
   )
 }
@@ -138,7 +140,7 @@ const Profile = () => {
 
 // redirect to login route
 const toLogin = () => {
-  console.log(localStorage.getItem('token'));
+ // console.log(localStorage.getItem('token'));
   //setToken(null);
   localStorage.removeItem('token');
   window.location.href = "/";
