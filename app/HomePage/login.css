@@ -10,6 +10,7 @@ html {
   font-family: "Mitr", sans-serif;
 }
 body {
+  position: unset;
   width: 100vw;
   height: 100vh;
   /* background-image: url("https://images.pexels.com/photos/1275415/pexels-photo-1275415.jpeg"); */

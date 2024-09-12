@@ -34,6 +34,8 @@
 
 @media only screen and (max-width: 1200px) {
   body{
+    position: unset;
+    overflow: auto;
     margin: auto;
     padding: auto;
     width: auto;
@@ -52,5 +54,12 @@
   }
   .mobile-screen-button{
     justify-content: center;
+    position: static;
+    align-items: center;
+    text-align: center;
+    gap: 0;
+    left: 0;
+    right: 0;
+    padding-top: 30%;
   }
 }

@@ -1,9 +1,11 @@
 body {
     margin: 0;
+    position: unset;
   }
   
   html {
     box-sizing: border-box;
+    position: unset;
   }
   
   *, *:before, *:after {
@@ -65,10 +67,14 @@ body {
   .button:hover {
     background-color: #555;
   }
-  
-  @media screen and (max-width: 650px) {
+
+
+  @media only screen and (max-width: 1200px) {
+    body{
+      position: unset;
+    }
     .column {
       width: 100%;
       display: block;
     }
-  }
+    }

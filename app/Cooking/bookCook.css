@@ -32,7 +32,35 @@
     transition: background-color 0.3s ease;
   }
 
-  @media only screen and (max-width:500px) {
+  @media only screen and (max-width: 1200px) {
  
-   
+    body{
+      position: unset;
+      overflow: auto;
+      margin: auto;
+      padding: auto;
+      width: auto;
+      height: auto;
+    }
+    .reservation-form {
+      display: block;
+    }
+    .mobile-screen-block{
+      padding: 5px;
+      display: block;
+    }
+    .mobile-screen-from-to{
+      padding: 5px;
+      display: block;
+    }
+    .mobile-screen-button{
+      justify-content: center;
+      position: static;
+      align-items: center;
+      text-align: center;
+      gap: 0;
+      left: 0;
+      right: 0;
+      padding-top: 30%;
+    }
 }

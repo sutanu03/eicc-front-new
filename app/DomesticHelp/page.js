@@ -28,7 +28,7 @@ const Domestic = () => {
   return (
     <>
     <Header />
-    <div className='overflow-auto'>
+    <div className='mobile-screen-main'>
       <div className="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3 mt-5">
         <div className={`tpn_card ${selectedItems.includes('Brooming') ? 'selected' : ''}`} onClick={() => toggleSelection('Brooming')}>
           <img src="/img/brooming.png" className="w-100 mb-4" />

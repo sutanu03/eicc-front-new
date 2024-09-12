@@ -17,7 +17,7 @@ const CookBook = () => {
     const [toDate, setToDate] = useState(new Date());
     const [pet, setPet] = useState(false);
     const { token } = useContext(UserContext);
-    console.log(token, "from CookBook");
+   // console.log(token, "from CookBook");
 
     useEffect(() => {
         
@@ -66,12 +66,12 @@ const CookBook = () => {
                     Authorization: `Bearer ${token}`,
                 },
             });
-            console.log('Form data saved successfully:', response.data);
+           // console.log('Form data saved successfully:', response.data);
             alert("Booking Confirmed!");
             //window.location.href = "/Profile";
             router.push("/Profile");
         } catch (error) {
-            console.error('Error saving form data:', error);
+           // console.error('Error saving form data:', error);
         }
     };
 
@@ -86,7 +86,7 @@ const CookBook = () => {
                 <form onSubmit={handleSubmit}>
                     <div className="reservation-form">
                         <h2 className='text-4xl font-bold text-black'>Confirm Your Booking Slot</h2>
-                        <div className='flex justify-around'>
+                        <div className='mobile-screen-block flex justify-around'>
                             <div>
                                 <div className='flex'>
                                     <label className='w-[120px] text-[#000]'>Family members *</label>
@@ -105,7 +105,7 @@ const CookBook = () => {
                                     <input type="checkbox" className="ml-0 mt-2" checked={pet} onChange={handlePetsChange} />
                                 </div>
                             </div>
-                            <div id='formto' className='flex justify-between gap-4'>
+                            <div id='formto' className='mobile-screen-from-to flex justify-between gap-4'>
                                 <div>
                                     <label className='w-full text-[#000]'>From* :</label>
                                     <input className='w-full text-black' type="datetime-local" value={fromDate} onChange={handleFromChange} id="datetime1" name="datetime1" min={minDatetime} required />
@@ -116,7 +116,7 @@ const CookBook = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='flex justify-end gap-4 fixed bottom-10 right-10 min-w-full'>
+                        <div className='mobile-screen-button flex justify-end gap-4 fixed bottom-10 right-10 min-w-full'>
                             <button onClick={resetPage} className='bg-[#34363A] text-2xl text-white font-bold w-[100px] p-[10px] rounded-sm'>Cancel</button>
                             <button type="submit" className='bg-[#94D163] text-2xl text-black font-bold w-[100px] p-[10px] rounded-sm'>Book</button>
                         </div>

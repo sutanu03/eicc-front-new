@@ -79,3 +79,17 @@ h6 {
   background: var(--bg-darker);
   box-shadow: none;
 }
+
+@media only screen and (max-width: 1200px) {
+  body{
+    position: unset;
+    overflow: auto;
+    margin: auto;
+    padding: auto;
+    width: auto;
+    height: auto;
+  }
+  .mobile-screen-main{
+    position: unset;
+  }
+}

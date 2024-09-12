@@ -5,7 +5,7 @@ import React from 'react'
 const page = () => {
   return (
     <>
-    <Header className="fixed"/>
+    <Header className=""/>
 <section className="text-black body-font bg-gray-300">
     <div className="container flex flex-col md:flex-row lg:max-w-5xl w-full px-5 py-12 md:py-24 mx-auto section"
         id="contact-form">

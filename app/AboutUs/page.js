@@ -6,7 +6,7 @@ import Header from '@/Components/Header';
 const page = () => {
   return (
     <>
-    <Header className="fixed"/>
+    <Header className=""/>
 <div className="about-section">
   <h1 className='text-3xl text-center font-bold'>About Us</h1>
   <p>We are EICC working since 2015</p>
