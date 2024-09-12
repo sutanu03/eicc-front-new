@@ -13,7 +13,7 @@
     height: 100%;
     align-items: center;
     justify-content: center;
-    position: sticky;
+    /* position: sticky; */
   }
   
    .button-box2 {

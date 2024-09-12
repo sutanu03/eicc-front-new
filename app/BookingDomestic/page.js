@@ -125,16 +125,8 @@ const DomesticBook = (props) => {
     <form onSubmit={handleSubmit}>
         <div className="reservation-form">
           <h2 className='text-4xl font-bold text-black'>Confirm Your Booking Slot</h2>
-          <div className='flex justify-around'>
+          <div className='mobile-screen-block flex justify-around'>
     <div>
-
-
-{/*     <h2>Selected Items:</h2>
-        <ul>
-          {selectedItems.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))}
-        </ul> */}
 
 
     <div className='flex justify-around'>
@@ -193,7 +185,7 @@ const DomesticBook = (props) => {
     </div>
 
       {/* <input type="number" value={floor} onChange={(e) => {setFloor(e.target.value)}} min={1} max={5}/> */}
-      <div className='flex justify-between gap-4'>
+      <div className='mobile-screen-from-to flex justify-between gap-4'>
             <div>
               <label className='w-full text-[#000]'>From* :</label>
               <input type="datetime-local" value={fromDate} onChange={(e) => setFromDate(e.target.value)} className='w-full text-black' id="fromDate" name="fromDate" min={minDatetime} required />
@@ -204,21 +196,19 @@ const DomesticBook = (props) => {
             </div>
           </div>
   </div>
-          <div className='flex justify-end gap-4 fixed bottom-10 right-10 min-w-full'>
+          <div className='mobile-screen-button flex justify-end gap-4 fixed bottom-10 right-10 min-w-full'>
             <button onClick={resetPage} className='bg-[#34363A] text-2xl text-white font-bold w-[100px] p-[10px] rounded-sm'>Cancel</button>
             <button type="submit" className='bg-[#94D163] text-2xl text-black font-bold w-[100px] p-[10px] rounded-sm'>Book</button>
           </div>
     </div>
     </form>
-    {/* <ProgressBarContainer/> */}
-      
     </>
   )
 }
 
 // refresh page after cancel button to clear everything in the  form
 const resetPage = (e) => {
-  //confirm('Want to cancel form submission?');
+  confirm('Want to cancel form submission?');
   window.location.reload(false);
 };
 
