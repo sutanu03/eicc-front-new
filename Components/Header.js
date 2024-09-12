@@ -1,53 +1,46 @@
+"use client"
 import React from 'react';
 import Link from 'next/link';
 import { FaUserCircle } from "react-icons/fa";
 import "../app/head.css"
+import { MdMenu, MdClose } from "react-icons/md";
+import { useState } from 'react';
 
 function Header() {
 
-  // header component
-  {/* <div className="sticky top-0 z-10 bg-white bg-opacity-30 shadow-2xl">
-      <div className="max-w-8xl mx-auto px-4">
-    <div className="flex items-center justify-between h-16">
-      <Link href="/">
-      <h1 className="text-2xl text-gray-900 font-bold">
-          EICC
-        </h1>
-      </Link>
-      
-      <div className="flex space-x-10 text-gray-900 font-semibold">
-      <Link href="#About">About</Link>
-      <Link href="#Contact">Contact</Link>
-      {/* <Link href="">Assign User</Link> 
-      <Link href="/Services">Services</Link>
-      <Link href="/Profile"><FaUserCircle className='size-6'/></Link>
-      </div>
-     </div>
-    </div>
-    </div> */}
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   return (
     <>
-
-<div id='maindiv' >
-
-<Link href="/HomePage"><h1 id='eicc' >EICC</h1></Link>
-   
-   <div id='linkdiv' >
-   
-         <Link href="/AboutUs">About</Link>
-         <Link href="/ContactUs">Contact</Link>
-   
-         <Link href="/Services">Services</Link>
-         <Link href="/Profile"><FaUserCircle className='size-6'/></Link>
-         {/* <Link href="#">Logout</Link> */}
-   
-   </div>
-   
-   
-   </div>
-
-    </>
+    <div id='maindiv' >   
+    <Link href="/HomePage"><h1 id='eicc' >EICC</h1></Link>
+       
+       <div id='linkdiv' >      
+             <Link href="/AboutUs">About</Link>
+             <Link href="/ContactUs">Contact</Link>
+       
+             <Link href="/Services">Services</Link>
+             <Link href="/Profile"><FaUserCircle className='size-6'/></Link>  
+       </div>
+       {/* Hamburger Menu Icon */}
+       <div className="menu-icon" onClick={toggleMenu}>
+              {menuOpen ? <MdClose size={30} /> : <MdMenu size={30} />}
+            </div>
+       
+       {/* Menu for mobile devices */}
+       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`} id='mv-middle'>
+            <Link href="/AboutUs" onClick={toggleMenu}>About</Link>
+            <Link href="/ContactUs" onClick={toggleMenu}>Contact</Link>
+            <Link href="/Services" onClick={toggleMenu}>Services</Link>
+            <Link href="/Profile" onClick={toggleMenu}><FaUserCircle className='size-6' /></Link>
+          </div>
+       
+       </div>
+        </>
     
   );
 }

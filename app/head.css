@@ -1,57 +1,155 @@
-*{
-    padding: 0;
+
+/* Universal reset */
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-   
-   }
-   body {
-   }
-   #eicc{
-       margin-left: 2vw;
-       font-size: x-large;
-   }
-   
-   #maindiv{
-       display: flex;
-       color: rgb(0, 0, 0);
-       align-items: center;
-       justify-content: space-between;
-       /* background-color: rgb(255, 255, 255); */
-       font-weight: bold;
-       position: sticky;
-       top: 0;
-       z-index: 10px;
-       font-size: 3vh;
-       box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
-   }
-   
-   #linkdiv{
-        display: flex;
-        gap: 3vw;
-        padding: 2vh;
-   
-   }
+}
 
-/*      @media only screen and (max-width:500px) {
-      
-        #eicc{
-            position: relative;
-            right: 40vw;
-            top: 3.5vh;
-        }
+/* Header Logo Styling */
+#eicc {
+    margin-left: 2vw;
+    font-size: x-large;
+    color: #000;
+    font-weight: bold;
+}
 
-        #linkdiv{
-            
-            position: relative;
-            left: 20vw;
-           bottom: 2vh;
+/* Main header container */
+#maindiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    color: black;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    font-size: 3vh;
+    padding: 1vh 2vw;
+    background-color: white; /* Set a background to prevent overlap with content */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
 
-        }
+/* Navigation links container */
+#linkdiv {
+    display: flex;
+    gap: 3vw;
+    padding: 2vh;
+}
 
-       
+/* Mobile Menu (initially hidden) */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 60px; /* Below the header */
+    right: 0;
+    background-color: white;
+    padding: 1rem 2rem;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-100%);
+}
 
-  
-  } */
+.mobile-menu.open {
+    display: flex;
+    transform: translateY(0);
+}
 
-   
+/* Hamburger Menu Icon */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    margin-right: 2vw;
+}
 
+/* Responsive Design */
+
+/* Medium to small screens (below 1200px) */
+@media only screen and (max-width: 1200px) {
+    #maindiv {
+        font-size: 2.5vh;
+    }
+
+    #linkdiv {
+        gap: 2vw;
+    }
+
+    #mv-middle{
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* Small screens (below 768px) */
+@media only screen and (max-width: 768px) {
+    /* Hide desktop navigation and show hamburger icon */
+    #linkdiv {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    #maindiv {
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 2vh;
+        padding: 1vh 2vw;
+    }
+
+    /* Mobile Menu Styling */
+    .mobile-menu a {
+        text-decoration: none;
+        color: #000;
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 0.5rem 0;
+    }
+
+    /* Logo adjustments for smaller screens */
+    #eicc {
+        font-size: large;
+        margin-left: 1vw;
+    }
+
+    #mv-middle{
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* Extra small screens (below 480px) */
+@media only screen and (max-width: 480px) {
+    #maindiv {
+        font-size: 1.8vh;
+        padding: 1vh 1vw;
+    }
+
+    #eicc {
+        font-size: medium;
+        margin-left: 1vw;
+    }
+
+    .menu-icon {
+        margin-right: 1vw;
+    }
+
+    .mobile-menu {
+        top: 50px; /* Adjust for smaller devices */
+        padding: 1rem 1vw;
+    }
+
+    .mobile-menu a {
+        font-size: 1rem;
+    }
+
+    #mv-middle{
+        align-items: center;
+        justify-content: center;
+    }
+}
