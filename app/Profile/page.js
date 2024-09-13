@@ -3,10 +3,17 @@ import { useContext, useEffect, useState } from "react"
 import "./profile.css"
 import Header from '@/Components/Header';
 import { UserContext } from "@/context/UserContext";
-
 import { FaUserCircle } from "react-icons/fa";
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import Card from 'react-bootstrap/Card';
 
 const Profile = () => {
+  // for modal
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
     const logoutDone = () => {
         window.location.reload(false);
@@ -61,7 +68,46 @@ const Profile = () => {
       <section className="profile">
   <header className="header">
     <div className="details">
-     <FaUserCircle />
+
+      {/* Click icon to open view details */}
+
+     <FaUserCircle onClick={handleShow} className="size-10 cursor-pointer"/>
+     <Modal
+        show={show}
+        onHide={handleClose}
+        backdrop="static"
+        keyboard={false}
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>Details</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+
+        {/* card to show user details */}
+
+        <Card>
+          <Card.Body>Claire Doe</Card.Body>
+        </Card>
+
+        {/* <Card>
+      {/* <Card.Header>Details</Card.Header> 
+      <Card.Body>
+        <Card.Title>Claire Doe</Card.Title>
+        <Card.Text>
+        Kochi, India
+        </Card.Text>
+      </Card.Body>
+    </Card> */}
+
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="danger" className='bg-slate-700' onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="success" className='bg-slate-700'>Save</Button>
+        </Modal.Footer>
+      </Modal>
+
       <h1 className="heading">Claire Doe</h1>
       <div className="location">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">

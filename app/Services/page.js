@@ -14,11 +14,12 @@ const Services = () => {
     <div id='card1' className="card">
   <img src="/img/clean.png" className="card__image" alt="brown couch" />
   <div className="card__content">
-    <time dateTime="2021-03-30" className="card__date">Brooming |
+    <time dateTime="2021-03-30" className="card__date"> <i className='font-bold'> From just <strong>₹ 199</strong> </i>
+      {/* Brooming |
         Mopping |
         Bathroom Cleaning |
         Dusting |
-        Dishwashing</time>
+        Dishwashing */}</time>
     <span className="card__title">
         Domestic Help
         </span>
@@ -30,8 +31,13 @@ const Services = () => {
     <div id='card2'  className="card">
   <img  src="/img/cook.png" className="card__image" alt="brown couch" />
   <div className="card__content">
-    <time dateTime="2021-03-30" className="card__date">Feels like home...</time>
-    <span className="card__title">Cooking</span>
+    <time dateTime="2021-03-30" className="card__date">{/* Feels like home... */} <i className='font-bold'>From just <strong>₹ 299</strong> (For 6 Hours) </i> </time>
+    <div className='flex gap-20'>
+    <span className="card__title">
+      Cooking
+    </span>
+    
+    </div>
   </div>
 </div>
 </Link>
