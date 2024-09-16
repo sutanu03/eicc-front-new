@@ -89,16 +89,6 @@ const Profile = () => {
           <Card.Body>Claire Doe</Card.Body>
         </Card>
 
-        {/* <Card>
-      {/* <Card.Header>Details</Card.Header> 
-      <Card.Body>
-        <Card.Title>Claire Doe</Card.Title>
-        <Card.Text>
-        Kochi, India
-        </Card.Text>
-      </Card.Body>
-    </Card> */}
-
         </Modal.Body>
         <Modal.Footer>
           <Button variant="danger" className='bg-slate-700' onClick={handleClose}>
