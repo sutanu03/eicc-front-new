@@ -35,8 +35,6 @@
   @media only screen and (max-width: 1200px) {
  
     body{
-      position: unset;
-      overflow: auto;
       margin: auto;
       padding: auto;
       width: auto;
@@ -44,6 +42,7 @@
     }
     .reservation-form {
       display: block;
+      overflow: auto;
     }
     .mobile-screen-block{
       padding: 5px;

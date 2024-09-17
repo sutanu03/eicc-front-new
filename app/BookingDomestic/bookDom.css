@@ -1,4 +1,6 @@
+
 .reservation-form {
+    padding-top: 9vh;
     max-width: 80%;
     margin: 0 auto;
     padding: 20px;
@@ -34,7 +36,6 @@
 
 @media only screen and (max-width: 1200px) {
   body{
-    position: unset;
     overflow: auto;
     margin: auto;
     padding: auto;
