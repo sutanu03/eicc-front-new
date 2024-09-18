@@ -94,8 +94,8 @@ const DomesticBook = (props) => {
 
   const saveDomBookToDatabase = async (data) => {
 
-    console.log(data);
-    console.log("data is there ",JSON.stringify(data));
+  //  console.log(data);
+   // console.log("data is there ",JSON.stringify(data));
    
      const apiEndpoint = `https://scube.jsontech.in/api/domBook`;
 
@@ -105,7 +105,7 @@ const DomesticBook = (props) => {
                     Authorization: `Bearer ${token}`,
                 },
             });
-            console.log('Form data saved successfully:', response.data);
+        //    console.log('Form data saved successfully:', response.data);
             alert("Booking Confirmed!");
             //window.location.href = "/Profile";
             router.push("/Profile");
