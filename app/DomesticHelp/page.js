@@ -32,31 +32,31 @@ const Domestic = () => {
       <div className="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3 mt-5">
         <div className={`tpn_card ${selectedItems.includes('Brooming') ? 'selected' : ''}`} onClick={() => toggleSelection('Brooming')}>
           <img src="/img/brooming.png" className="w-100 mb-4" />
-          <h5>Brooming</h5>
-          <i className='font-bold'> From just <strong>₹ 199</strong> (For 1.5 Hours)</i>
+          
+          <i className='font-bold'><strong>₹ 199</strong> (For 1.5 Hours)</i>
           {/* <p><strong>₹ 199 (For 1.5 Hours)</strong></p> */}
         </div>
 
         <div className={`tpn_card ${selectedItems.includes('Mopping') ? 'selected' : ''}`} onClick={() => toggleSelection('Mopping')}>
           <img src="/img/mopping.png" className="w-100 mb-4" />
-          <h5>Mopping</h5>
-          <i className='font-bold'> From just <strong>₹ 199</strong> (For 1.5 Hours)</i>
+          
+          <i className='font-bold'><strong>₹ 199</strong> (For 1.5 Hours)</i>
           </div>
         <div className={`tpn_card ${selectedItems.includes('Bathroom Cleaning') ? 'selected' : ''}`} onClick={() => toggleSelection('Bathroom Cleaning')}>
           <img src="/img/bathroom.png" className="w-100 mb-4" />
-          <h5>Bathroom Cleaning</h5>
+          
           {/* <p>₹ 399 (For 1.5 Hours)</p> */}
-          <i className='font-bold'> From just <strong>₹ 399</strong> (For 1.5 Hours)</i>
+          <i className='font-bold'><strong>₹ 399</strong> (For 1.5 Hours)</i>
           </div>
         <div className={`tpn_card ${selectedItems.includes('Dusting') ? 'selected' : ''}`} onClick={() => toggleSelection('Dusting')}>
           <img src="/img/dusting.png" className="w-100 mb-4" />
-          <h5>Dusting</h5>
-          <i className='font-bold'> From just <strong>₹ 199</strong> (For 1.5 Hours)</i>
+          
+          <i className='font-bold'><strong>₹ 199</strong> (For 1.5 Hours)</i>
           </div>
         <div className={`tpn_card ${selectedItems.includes('Dishwashing') ? 'selected' : ''}`} onClick={() => toggleSelection('Dishwashing')}>
           <img src="/img/dish.png" className="w-100 mb-4" />
-          <h5>Dishwashing</h5>
-          <i className='font-bold'> From just <strong>₹ 199</strong> (For 1.5 Hours)</i>
+          
+          <i className='font-bold'><strong>₹ 199</strong> (For 1.5 Hours)</i>
           </div>
       </div>
       <div className="text-center mt-3">

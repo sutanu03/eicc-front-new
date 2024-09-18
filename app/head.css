@@ -1,11 +1,11 @@
-/* Universal reset */
+/* /* Universal reset 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
-  /* Header Logo Styling */
+  /* Header Logo Styling 
   #eicc {
     margin-left: 2vw;
     font-size: x-large;
@@ -13,7 +13,7 @@
     font-weight: bold;
   }
   
-  /* Main header container */
+  /* Main header container 
   #header-container {
     width: 100%;
     background-color: white;
@@ -21,7 +21,7 @@
     padding: 1vh 0;
   }
   
-  /* Header main div */
+  /* Header main div 
   #maindiv {
     display: flex;
     align-items: center;
@@ -31,17 +31,17 @@
     font-weight: bold;
     font-size: 3vh;
     padding: 0 2vw;
-    background-color: white; /* Set a background to prevent overlap with content */
+    background-color: white; /* Set a background to prevent overlap with content 
   }
   
-  /* Navigation links container */
+  /* Navigation links container 
   #linkdiv {
     display: flex;
     gap: 3vw;
     padding: 2vh;
   }
   
-  /* Mobile Menu (initially hidden) */
+  /* Mobile Menu (initially hidden) 
   .mobile-menu {
     align-items: center;
     display: none;
@@ -55,7 +55,7 @@
     transform: translateY(0);
   }
   
-  /* Hamburger Menu Icon */
+  /* Hamburger Menu Icon 
   .menu-icon {
     display: none;
     cursor: pointer;
@@ -64,7 +64,7 @@
   
   /* Responsive Design */
   
-  /* Medium to small screens (below 1200px) */
+  /* Medium to small screens (below 1200px) 
   @media only screen and (max-width: 1200px) {
     #maindiv {
       font-size: 2.5vh;
@@ -79,9 +79,9 @@
     }
   }
   
-  /* Small screens (below 768px) */
+  /* Small screens (below 768px) 
   @media only screen and (max-width: 768px) {
-    /* Hide desktop navigation and show hamburger icon */
+    /* Hide desktop navigation and show hamburger icon 
     #linkdiv {
       display: none;
     }
@@ -97,7 +97,7 @@
       padding: 1vh 2vw;
     }
   
-    /* Mobile Menu Styling */
+    /* Mobile Menu Styling 
     .mobile-menu {
       display: flex;
       flex-direction: column;
@@ -111,14 +111,14 @@
       padding: 0.5rem 0;
     }
   
-    /* Logo adjustments for smaller screens */
+    /* Logo adjustments for smaller screens 
     #eicc {
       font-size: large;
       margin-left: 1vw;
     }
   }
   
-  /* Extra small screens (below 480px) */
+  /* Extra small screens (below 480px) 
   @media only screen and (max-width: 480px) {
     #maindiv {
       font-size: 1.8vh;
@@ -142,4 +142,46 @@
       padding: 1rem 1vw;
     }
   }
+   */
+
+   img {max-width: 100%;}
+.clr {clear: both;}
+body {
+  background-color: #ffffff;
+}
+
+#masthead {
+  background-color: rgb(41, 41, 41);
+  text-align: center;
   
+  .logo {
+    display: inline-block;
+    max-width: 300px;
+    padding: 1em 0;
+    vertical-align: middle;
+    color: white;
+    @media screen and (min-width: 56em) {
+      float: left;
+      padding: .5em;
+    }
+  }
+  
+  nav {
+    background-color: #74b340;
+    text-align: center;
+    @media screen and (min-width: 56em) {
+      float: right;
+      background-color: transparent;
+      margin: 1em 0 0 0;
+    }
+    
+    .a {
+
+      color: white;
+      display: inline-block;
+      margin: 0 0 .5em 0;
+      padding: .5em 1em;
+      text-decoration: none;
+    }
+  }
+}

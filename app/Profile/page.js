@@ -85,9 +85,7 @@ const Profile = () => {
 
         {/* card to show user details */}
 
-        <Card>
-          <Card.Body>Claire Doe</Card.Body>
-        </Card>
+        <p>Claire Doe</p>
 
         </Modal.Body>
         <Modal.Footer>

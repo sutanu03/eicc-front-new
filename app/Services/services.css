@@ -113,13 +113,13 @@
       overflow: auto;
     }
     #card1{
-      width: 70vw;
-      height: 40vh;
+      width: auto;
+      height: auto;
    
     }
     #card2{
-      width: 70vw;
-      height: 40vh;
+      width: auto;
+      height: auto;
       
     }
   }
