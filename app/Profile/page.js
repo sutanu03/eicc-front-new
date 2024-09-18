@@ -1,32 +1,50 @@
 "use client"
-import { useContext, useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react";
+/* import axios from "axios"; */
 import "./profile.css"
 import Header from '@/Components/Header';
 import { UserContext } from "@/context/UserContext";
 import { FaUserCircle } from "react-icons/fa";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import Card from 'react-bootstrap/Card';
 
 const Profile = () => {
+
+  /* // to prevent api access without login
+  const Process = async() =>{
+
+    const response = await axios.get('https://scube.jsontech.in/api/protected'); 
+    let LoginStatusCheck = response.data;
+    console.log(JSON.stringify(LoginStatusCheck));
+
+    if(LoginStatusCheck.success===true){
+      window.location.href = "/Profile"
+    }
+    else{
+      window.location.href = "/Login"
+
+    }
+
+  } */
+
+  // to store all bookings
+  const [userData, setUserData] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const { token } = useContext(UserContext);
+
+  // to store user details
+  const [fetchData, setFetchData] = useState([]);
+
   // for modal
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-    const logoutDone = () => {
-        window.location.reload(false);
-    }
-
-
-    const [userData, setUserData] = useState([]);
-    const [loading, setLoading] = useState(false);
-    const { token, setToken } = useContext(UserContext);
+    // to fetch all bookings
 
     useEffect(() => {
-     // Process();
-    // console.log(token);
+       //Process();
      localStorage.setItem('token', token);
       if(token !== null){
         setLoading(true)
@@ -38,27 +56,19 @@ const Profile = () => {
         .finally(() => {
           
           setLoading(false)
-        })
+        });
+
+        // to fetch user details
+        fetch(`https://scube.jsontech.in/api/showPersonalDetails`, {
+          headers: { Authorization: `Bearer ${token}` }
+      })
+          .then((res) => res.json())
+          .then((data) => {
+            setFetchData(data)
+           // console.log(fetchData);
+          })
       }
-      
     }, [token])
-
-
-    // const Process = async() =>{
-
-    //   const response = await axios.get('https://scube.jsontech.in/api/protected'); 
-    //   let LoginStatusCheck = response.data;
-    //   console.log(JSON.stringify(LoginStatusCheck));
-
-    //   if(LoginStatusCheck.success===true){
-    //     window.location.href = "/Profile"
-    //   }
-    //   else{
-    //     window.location.href = "/Login"
-
-    //   }
-
-    // }
 
   return(
       <>
@@ -83,9 +93,12 @@ const Profile = () => {
         </Modal.Header>
         <Modal.Body>
 
-        {/* card to show user details */}
+        {/* show user details */}
 
-        <p>Claire Doe</p>
+        <div>
+      <h1>{fetchData.name}</h1>
+      <p>{fetchData.email}</p>
+    </div>
 
         </Modal.Body>
         <Modal.Footer>
