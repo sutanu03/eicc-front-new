@@ -5,13 +5,13 @@
   --m-8-0: 8px 0;
 }
 html {
-  position: fixed;
+  /* position: fixed; */
   font-size: 63.5%;
-  font-family: "Mitr", sans-serif;
+  /* font-family: "Mitr", sans-serif; */
 }
 body {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   /* background-image: url("https://images.pexels.com/photos/1275415/pexels-photo-1275415.jpeg"); */
  /*  background-image: url("https://fastmaidservice.com/wp-content/uploads/2021/04/5-Advantages-Of-Commercial-Cleaning-Services-For-Business-Owners.jpg");
    */

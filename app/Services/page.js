@@ -6,7 +6,7 @@ import "./services.css"
 const Services = () => {
   return (
     <>
-    <Header className="fixed"/>
+    <Header />
     <div id='maindiv1' className='flex items-center justify-around mt-5'>
 
 

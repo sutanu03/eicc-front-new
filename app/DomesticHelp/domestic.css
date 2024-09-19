@@ -91,6 +91,6 @@ img {
     height: auto;
   }
   .mobile-screen-main{
-    overflow: auto;
+    overflow: scroll;
   }
 }

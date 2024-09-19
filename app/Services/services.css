@@ -110,7 +110,7 @@
     #maindiv1{
       display: flex;
       flex-direction: column;
-      overflow: auto;
+      overflow: scroll;
     }
     #card1{
       width: auto;
