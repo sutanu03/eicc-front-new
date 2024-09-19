@@ -6,16 +6,20 @@ import "./bookDom.css"
 import { FaPlusCircle } from "react-icons/fa";
 import { FaMinusCircle } from "react-icons/fa";
 import Header from '@/Components/Header';
-import { useRouter } from 'next/navigation';
+import { useRouter } from "next/navigation";
 import { UserContext } from '@/context/UserContext';
 
 const DomesticBook = (props) => {
 
-  // validate token
-  const { token } = useContext(UserContext);
-  if(token === null){
-    window.location.href = "/";
-  }
+    // validate token
+    const { token } = useContext(UserContext);
+    const router = useRouter();
+  
+    useEffect(() => {
+      if(token === null){
+        router.push("/");
+      }
+   }, [token])
 
   const [selectedItems, setSelectedItems] = useState([]);
 
@@ -28,7 +32,6 @@ const DomesticBook = (props) => {
   }, []);
 
 
-  const router = useRouter(); 
   const [floors, setFloors] = useState(0);
   const [bhk, setBHK] = useState(0);
   const [familyMembers, setFamilyMembers] = useState(0);

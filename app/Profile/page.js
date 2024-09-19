@@ -7,6 +7,7 @@ import { UserContext } from "@/context/UserContext";
 import { FaUserCircle } from "react-icons/fa";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import { useRouter } from "next/navigation";
 
 const Profile = () => {
 
@@ -31,6 +32,7 @@ const Profile = () => {
   const [userData, setUserData] = useState([]);
   const [loading, setLoading] = useState(false);
   const { token } = useContext(UserContext);
+  const router = useRouter();
 
   // to store user details
   const [fetchData, setFetchData] = useState([]);
@@ -47,9 +49,10 @@ const Profile = () => {
        //Process();
      localStorage.setItem('token', token);
      
-     // validate token 
-     if(token === null){
-      window.location.href = "/";
+       // validate token
+
+    if(token === null){
+      router.push("/");
     }
       if(token !== null){
         setLoading(true)

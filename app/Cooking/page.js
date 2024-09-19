@@ -10,13 +10,16 @@ import { useRouter } from 'next/navigation';
 
 const CookBook = () => { 
 
-    // validate token
+      // validate token
   const { token } = useContext(UserContext);
-  if(token === null){
-    window.location.href = "/";
-  }
+  const router = useRouter();
 
-    const router = useRouter();
+  useEffect(() => {
+    if(token === null){
+      router.push("/");
+    }
+ }, [token])
+
     const [family, setFamily] = useState(0);
     const [minDatetime, setMinDatetime] = useState('');
     const [fromDate, setFromDate] = useState(new Date());

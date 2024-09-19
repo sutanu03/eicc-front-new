@@ -1,16 +1,21 @@
 "use client"
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import "../AboutUs/about.css";
 import Header from '@/Components/Header';
 import { UserContext } from '@/context/UserContext';
+import { useRouter } from "next/navigation";
 
 const page = () => {
 
-  // validate token
-  const { token } = useContext(UserContext);
-  if(token === null){
-    window.location.href = "/";
-  }
+    // validate token
+    const { token } = useContext(UserContext);
+    const router = useRouter();
+  
+    useEffect(() => {
+      if(token === null){
+        router.push("/");
+      }
+   }, [token])
 
 
   return (
