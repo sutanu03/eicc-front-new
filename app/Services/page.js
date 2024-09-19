@@ -1,9 +1,18 @@
-import React from 'react';
+"use client"
+import React, { useContext } from 'react';
 import Link from 'next/link';
 import Header from '@/Components/Header';
 import "./services.css"
+import { UserContext } from '@/context/UserContext';
 
 const Services = () => {
+
+  // validate token
+  const { token } = useContext(UserContext);
+  if(token === null){
+    window.location.href = "/";
+  }
+
   return (
     <>
     <Header />

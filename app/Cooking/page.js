@@ -10,13 +10,18 @@ import { useRouter } from 'next/navigation';
 
 const CookBook = () => { 
 
+    // validate token
+  const { token } = useContext(UserContext);
+  if(token === null){
+    window.location.href = "/";
+  }
+
     const router = useRouter();
     const [family, setFamily] = useState(0);
     const [minDatetime, setMinDatetime] = useState('');
     const [fromDate, setFromDate] = useState(new Date());
     const [toDate, setToDate] = useState(new Date());
     const [pet, setPet] = useState(false);
-    const { token } = useContext(UserContext);
    // console.log(token, "from CookBook");
 
     useEffect(() => {

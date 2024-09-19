@@ -1,8 +1,16 @@
 "use client"
 import Header from '@/Components/Header'
-import React from 'react'
+import { UserContext } from '@/context/UserContext';
+import React, { useContext } from 'react'
 
 const page = () => {
+
+    // validate token
+  const { token } = useContext(UserContext);
+  if(token === null){
+    window.location.href = "/";
+  }
+
   return (
     <>
     <Header className=""/>

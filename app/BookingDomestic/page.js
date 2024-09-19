@@ -11,8 +11,13 @@ import { UserContext } from '@/context/UserContext';
 
 const DomesticBook = (props) => {
 
-  const [selectedItems, setSelectedItems] = useState([]);
+  // validate token
   const { token } = useContext(UserContext);
+  if(token === null){
+    window.location.href = "/";
+  }
+
+  const [selectedItems, setSelectedItems] = useState([]);
 
   useEffect(() => {
     // Retrieve selected items from localStorage

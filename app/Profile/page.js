@@ -46,6 +46,11 @@ const Profile = () => {
     useEffect(() => {
        //Process();
      localStorage.setItem('token', token);
+     
+     // validate token 
+     if(token === null){
+      window.location.href = "/";
+    }
       if(token !== null){
         setLoading(true)
         fetch(`https://scube.jsontech.in/api/showdombookings`, {
@@ -67,7 +72,7 @@ const Profile = () => {
             setFetchData(data)
            // console.log(fetchData);
           })
-      }
+      } 
     }, [token])
 
   return(

@@ -1,14 +1,21 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import "./domestic.css";
 import Link from 'next/link';
 import Header from '@/Components/Header';
+import { UserContext } from "@/context/UserContext";
 
 const Domestic = () => {
 
   const [selectedItems, setSelectedItems] = useState([]);
   const [selectedCount, setSelectedCount] = useState(0);
+
+  // validate token
+  const { token } = useContext(UserContext);
+  if(token === null){
+    window.location.href = "/";
+  }
 
   const toggleSelection = (itemName) => {
     if (selectedItems.includes(itemName)) {

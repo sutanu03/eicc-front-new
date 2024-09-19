@@ -1,11 +1,19 @@
 "use client"
-import React, {Component} from 'react';
+import React, {Component, useContext} from 'react';
 import "../home.css";
 import Header from '@/Components/Header';
 import { GrLinkNext, GrLinkPrevious } from "react-icons/gr";
 import Link from 'next/link';
+import { UserContext } from "@/context/UserContext";
 
 const Home = () => {
+
+  // validate token
+  const { token } = useContext(UserContext);
+  if(token === null){
+    window.location.href = "/";
+  }
+  
   return (
     <>
       <Header/>
